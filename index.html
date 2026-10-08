@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A personalized animated Teachers' Day message card for Mr. Randy Bello.">
+  <title>Happy Teachers' Day | Mr. Randy Bello</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div id="particles" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand"><span>✦</span> Teachers' Day</div>
+    <button class="outline-btn" id="customizeBtn" type="button">Customize Card</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">A special message for</p>
+      <h1 id="heroTeacher">MR. RANDY BELLO</h1>
+      <p>Turn the pages like a book to reveal your thank-you message.</p>
+    </section>
+
+    <section class="card-stage" aria-label="Interactive Teachers' Day card">
+      <div class="book" id="book">
+        <article class="book-page back-page">
+          <div class="paper-texture"></div>
+          <div class="inside-content">
+            <span class="mini-label">WITH GRATITUDE</span>
+            <h2>Thank You,<br><span>Sir!</span></h2>
+            <p>Your patience, guidance, and encouragement help make learning meaningful.</p>
+            <div class="gold-line"></div>
+            <p class="small-note">Teachers inspire us to keep learning, growing, and believing in ourselves.</p>
+            <div class="signature" id="backSignature">— ZEN ASHLEY SANCHEZ</div>
+          </div>
+        </article>
+
+        <article class="book-page inside-page" id="messagePage">
+          <div class="paper-texture"></div>
+          <div class="inside-content message-content">
+            <span class="mini-label">A HEARTFELT NOTE</span>
+            <h2 id="messageGreeting">Dear Sir,</h2>
+            <p id="messageText">Happy Teachers Day Sir! Thank you for your patience, guidance, and for always helping us learn and grow. We truly appreciate everything you do for us. God bless you always!</p>
+            <div class="stars">✦ &nbsp; ✦ &nbsp; ✦</div>
+            <p class="small-note">With sincere appreciation,</p>
+            <div class="signature" id="frontSignature">ZEN ASHLEY SANCHEZ</div>
+          </div>
+        </article>
+
+        <article class="book-page front-page" id="frontPage">
+          <div class="cover-shine"></div>
+          <div class="cover-inner">
+            <div class="photo-frame">
+              <img id="teacherPhoto" src="teacher-photo.png" alt="Photo of Mr. Randy Bello">
+              <div class="photo-fallback" id="photoFallback">
+                <span>📷</span>
+                <b>Add a photo</b>
+              </div>
+            </div>
+            <p class="cover-kicker">A LITTLE THANK-YOU</p>
+            <h2>Happy<br><span>Teachers' Day!</span></h2>
+            <div class="cover-rule"></div>
+            <p class="cover-teacher" id="coverTeacher">MR. RANDY BELLO</p>
+            <button class="open-btn" id="openBtn" type="button">Open Card <span>→</span></button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="page-controls">
+      <button class="control-btn" id="prevBtn" type="button">← Previous</button>
+      <div class="page-status" id="pageStatus">Cover</div>
+      <button class="control-btn primary" id="nextBtn" type="button">Next →</button>
+    </div>
+
+    <section class="audio-section">
+      <div class="audio-copy">
+        <span class="audio-icon">♫</span>
+        <div>
+          <strong>Play the Teachers' Day music</strong>
+          <small id="audioLabel">teachers-day-audio.m4a</small>
+        </div>
+      </div>
+      <audio id="audioPlayer" controls preload="metadata">
+        <source src="teachers-day-audio.m4a" type="audio/mp4">
+        Your browser does not support audio playback.
+      </audio>
+    </section>
+
+    <section class="customize-panel" id="customizePanel" hidden>
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow">PERSONALIZE</p>
+          <h2>Make the card yours</h2>
+        </div>
+        <button class="close-btn" id="closeCustomize" type="button" aria-label="Close">×</button>
+      </div>
+
+      <div class="form-grid">
+        <label>
+          Teacher name
+          <input id="teacherInput" value="MR. RANDY BELLO" maxlength="60">
+        </label>
+
+        <label>
+          Student name
+          <input id="studentInput" value="ZEN ASHLEY SANCHEZ" maxlength="60">
+        </label>
+
+        <label class="full">
+          Personal message
+          <textarea id="messageInput" rows="5">Happy Teachers Day Sir! Thank you for your patience, guidance, and for always helping us learn and grow. We truly appreciate everything you do for us. God bless you always!</textarea>
+        </label>
+
+        <label>
+          Change photo
+          <input id="photoInput" type="file" accept="image/*">
+        </label>
+
+        <label>
+          Change audio
+          <input id="audioInput" type="file" accept="audio/*">
+        </label>
+      </div>
+
+      <div class="panel-buttons">
+        <button class="control-btn primary" id="applyBtn" type="button">Apply Changes</button>
+        <button class="control-btn" id="resetBtn" type="button">Reset</button>
+      </div>
+
+      <p class="help-text">Uploaded photo/audio previews work instantly in your browser. For GitHub Pages, keep the included <code>teacher-photo.png</code> and <code>teachers-day-audio.m4a</code> files in the same folder as this HTML file.</p>
+    </section>
+
+    <footer>
+      <p>Made with appreciation for teachers who inspire, guide, and help us grow. ❤️</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
